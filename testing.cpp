@@ -1,7 +1,9 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include <math.h>
-#include <map>
+#include <fstream>
+#include <cstdio>
+#include <string>
 
 float xVelocity;
 float yVelocity;
@@ -17,10 +19,18 @@ using namespace std;
 
 int main()
 {   
+    
+    
+    int readNum;
+    ifstream inFile;
+    inFile.open("file.txt");
+    inFile.read((char*)&readNum, sizeof(readNum));
+    inFile.close();
 
-   
+    cout << readNum << endl; // Outputs: 5
     
-    
+
+  
     const int PADDLE_WIDTH = 50;
     const int PADDLE_HEIGHT = 150;
 
@@ -46,6 +56,7 @@ int main()
     if (!font.loadFromFile("FFFFORWA.TTF")) {
         // handle error
     }
+    
   
 
     xVelocity = 5;
@@ -53,8 +64,10 @@ int main()
     
   
 
+    while (window.isOpen())
+    {
 
-      
+
 
         sf::Text playerScoreText;
         playerScoreText.setFont(font);
@@ -94,18 +107,18 @@ int main()
 
             if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) window.close();
         }   if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down) && player_pad.getPosition().y < 720 - PADDLE_HEIGHT) player_pad.move(sf::Vector2f(0, 5));
-            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up) && player_pad.getPosition().y > 0) player_pad.move(sf::Vector2f(0, -5));
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up) && player_pad.getPosition().y > 0) player_pad.move(sf::Vector2f(0, -5));
 
 
-
+        
         // AI opponent logic
-        float opponent_pad_velocity = 1;
+        float opponent_pad_velocity = readNum;
         if (opponent_pad.getPosition().y < circle.getPosition().y)
-            opponent_pad_velocity = 1;
+            opponent_pad_velocity = readNum;
         if (opponent_pad.getPosition().y > circle.getPosition().y)
-            opponent_pad_velocity = -1;
+            opponent_pad_velocity = -readNum;
         opponent_pad.move(sf::Vector2f(0, opponent_pad_velocity));
-
+        
 
 
         // physics
@@ -136,15 +149,15 @@ int main()
         }
         if (circle.getPosition().x > 1230) {
             playerScore++;
-            circle.setPosition(sf::Vector2f(600, 350)); 
+            circle.setPosition(sf::Vector2f(600, 350));
         }
 
         if (circle.getPosition().x < 0 || circle.getPosition().x > 1280 - 50) xVelocity = -xVelocity;
         if (circle.getPosition().y < 0 || circle.getPosition().y > 720 - 50) yVelocity = -yVelocity;
-         
-        
 
-        
+
+
+
         //RENDER
         window.clear();
         window.draw(circle);
@@ -155,7 +168,7 @@ int main()
         window.draw(line);
         window.draw(TK);
         window.display();
-    
 
+    }
     return 0;
 }

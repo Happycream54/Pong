@@ -1,33 +1,43 @@
 #include <iostream>
 #include <string>
+#include <fstream>
+
 
 using namespace std;
-
 void Menu()
 {
+	
 	int choice;
 	do
 	{
-		cout << "0. Play\n1. Settings\n2. creits\n3. exit\n\n";
+		cout << "0. Play\n1. difficulty\n2. exit\n\n";
 		cin >> choice;
 		switch (choice)
 		{
-		case 0:
-			
-			break;
-		case 1:
-			cout << "Your in the settings\n";
-			break;
-		case 2:
-			cout << "by appleninja360YT \n";
-			break;
-		case 3:
-			cout << "Ok Bye\n";
-			break;
+		case 0: {
+			system("testing.exe");
+		}break;
+		case 1: {
+			cout << "What level of difficulty would you like to play? (1-10)";
+			int num;
+			cin >> num;
+			if (num > 10);
+			num = 10;
+			ofstream outFile;
+			outFile.open("file.txt");
+			outFile.write((char*)&num, sizeof(num));
+			outFile.close();
+
+		}break;
+		case 2: {
+			cout << "Thanks for playing!\n";
+		}break;
+
+
 		}
 
 
-	} while (choice != 3);
+	} while (choice != 2);
 
 }
 
