@@ -18,11 +18,11 @@ void Menu()
 			system("testing.exe");
 		}break;
 		case 1: {
-			cout << "What level of difficulty would you like to play? (1-10)";
+			cout << "What level of difficulty would you like to play? (1-10)\n";
 			int num;
 			cin >> num;
-			if (num > 10);
-			num = 10;
+			if (num > 10)num = 10;
+			else num = num;
 			ofstream outFile;
 			outFile.open("file.txt");
 			outFile.write((char*)&num, sizeof(num));

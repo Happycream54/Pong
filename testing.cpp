@@ -27,7 +27,7 @@ int main()
     inFile.read((char*)&readNum, sizeof(readNum));
     inFile.close();
 
-    cout << readNum << endl; // Outputs: 5
+    cout << readNum << endl; // Outputs: users input
     
 
   
