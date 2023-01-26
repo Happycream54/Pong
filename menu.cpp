@@ -15,7 +15,7 @@ void Menu()
 		switch (choice)
 		{
 		case 0: {
-			system("testing.exe");
+			system("main.exe");
 		}break;
 		case 1: {
 			cout << "What level of difficulty would you like to play? (1-10)\n";
