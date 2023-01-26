@@ -14,7 +14,7 @@ void Menu()
 		cin >> choice;
 		switch (choice)
 		{
-		case 0: {
+		case 0: { 
 			system("main.exe");
 		}break;
 		case 1: {
