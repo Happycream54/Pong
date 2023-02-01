@@ -8,4 +8,5 @@ To modify the code it will be complicated.
 2. Install the **mingw32-base-bin** and the **mingw32-gcc-bin**
 3. You will need to add **c:\MinGW\bin** to the system enviroment. To do this,follow these instructions:
     
-    ![screenshot]https://cdn.discordapp.com/attachments/1070332969673293905/1070333195368812596/SPOILER_sus.png "heheheha")
+        ![screenshot](https://cdn.discordapp.com/attachments/1070332969673293905/1070333195368812596/SPOILER_sus.png "heheheha")
+
