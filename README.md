@@ -5,7 +5,7 @@ run **menu.exe** to execute the command based menu. Press **0** to play the game
 To modify the code it will be complicated.
 
 1. Install MinGW on your computer
-![PICTURE-1.png](https://i.postimg.cc/nzW4zbm7/PICTURE-1.png)
+[![PICTURE-1.png](https://i.postimg.cc/nzW4zbm7/PICTURE-1.png)](https://postimg.cc/ZBrB7QVK)
 2. Install the marked bins
 [![PICTURE-3.png](https://i.postimg.cc/ThMnVVC3/PICTURE-3.png)](https://postimg.cc/SYdXqzBB)
 4. Then you will need to add **c:\MinGW\bin** to the system enviroment.
