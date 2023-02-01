@@ -8,5 +8,5 @@ To modify the code it will be complicated.
 2. Install the **mingw32-base-bin** and the **mingw32-gcc-bin**
 3. You will need to add **c:\MinGW\bin** to the system enviroment. To do this,follow these instructions:
     
-     [![1540-Stream-Chat-Builds-A-Better-Supra-You-Tube-and-1-more-page-Personal-Microsoft-Edge-14-0.png](https://i.postimg.cc/1tBm8hJJ/1540-Stream-Chat-Builds-A-Better-Supra-You-Tube-and-1-more-page-Personal-Microsoft-Edge-14-0.png)]
+     ![1540-Stream-Chat-Builds-A-Better-Supra-You-Tube-and-1-more-page-Personal-Microsoft-Edge-14-0.png](https://i.postimg.cc/1tBm8hJJ/1540-Stream-Chat-Builds-A-Better-Supra-You-Tube-and-1-more-page-Personal-Microsoft-Edge-14-0.png)
 
